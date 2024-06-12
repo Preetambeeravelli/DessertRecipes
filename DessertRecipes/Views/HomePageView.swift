@@ -25,7 +25,7 @@ struct HomePageView: View {
                 }
                 .listStyle(.plain)
                 .scrollIndicators(.hidden)
-                .navigationTitle("Dessert Recipies")
+                .navigationTitle(AppTextConstants.DessertRecipes.rawValue)
             }.task {
                 homePageVM.fetchMeals()
             }

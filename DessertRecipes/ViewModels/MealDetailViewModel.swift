@@ -8,7 +8,6 @@
 import Foundation
 import Combine
 
-@MainActor
 class MealDetailViewModel: ObservableObject{
     @Published var mealDetail: MealDetail?
     @Published var errorMessage: String?
@@ -55,14 +54,7 @@ class MealDetailViewModel: ObservableObject{
     
     private func getIngredientAndMeasurements(for index: Int, from mealDetail: MealDetail, propertyname: PropertyName) -> String?{
         let mirror = Mirror(reflecting: mealDetail)
-        var propertyName: String{
-            switch propertyname{
-            case .Ingredient:
-                return "strIngredient\(index)"
-            case .Measurement:
-                return "strMeasure\(index)"
-            }
-        }
+        let propertyName = getPropertyname(for: index, propertyName: propertyname)
         for child in mirror.children {
             if child.label == propertyName,
                let value = child.value as? String,
@@ -71,5 +63,17 @@ class MealDetailViewModel: ObservableObject{
             }
         }
         return nil
+    }
+    
+    private func getPropertyname(for index: Int, propertyName: PropertyName) -> String{
+        var propertyNameToReturn: String{
+            switch propertyName{
+            case .Ingredient:
+                return "strIngredient\(index)"
+            case .Measurement:
+                return "strMeasure\(index)"
+            }
+        }
+        return propertyNameToReturn
     }
 }

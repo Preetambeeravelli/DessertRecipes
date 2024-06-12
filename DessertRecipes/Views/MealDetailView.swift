@@ -15,17 +15,17 @@ struct MealDetailView: View {
         ScrollView{
             VStack {
                 Group {
-                    Text("Instructions")
+                    Text(AppTextConstants.Instructions.rawValue)
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.vertical)
-                    Text(viewModel.mealDetail?.strInstructions ?? "Loading")
+                    Text(viewModel.mealDetail?.strInstructions ?? AppConstants.Loading.rawValue)
                         .font(.body)
                 }
                 .padding(.horizontal)
                 VStack {
                     Divider()
-                    Text("Ingredients")
+                    Text(AppTextConstants.Ingredients.rawValue)
                         .font(.title2)
                         .fontWeight(.bold)
                     Divider()
@@ -62,5 +62,5 @@ struct MealDetailView: View {
 }
 
 #Preview {
-    MealDetailView(viewModel: MealDetailViewModel(mealID: "53049"), title: "King")
+    MealDetailView(viewModel: MealDetailViewModel(mealID: "52768"), title: "Apple Frangipan Tart")
 }

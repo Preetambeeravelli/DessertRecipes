@@ -23,16 +23,13 @@ struct MealListView: View {
                             .padding()
                             .minimumScaleFactor(0.6)
                         Spacer()
-                        AsyncImage(url: URL(string: mealImage)) { phase in
-                            if let image = phase.image {
-                                image
-                                    .resizable()
-                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                    .scaledToFit()
-                                    
-                            }else {
-                                ProgressView()
-                            }
+                        AsyncImage(url: URL(string: mealImage)) { returnedImage in
+                            returnedImage
+                                .resizable()
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                .scaledToFit()
+                        } placeholder: {
+                            ProgressView()
                         }
                         .frame(width: 70, height: 70)
                         .padding(.trailing)
@@ -44,5 +41,5 @@ struct MealListView: View {
 }
 
 #Preview {
-    MealListView(mealName: "Appam", mealImage: "djyasgfjhkdsgfjhkd")
+    MealListView(mealName: "Apple Frangipan Tart", mealImage: "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg")
 }
