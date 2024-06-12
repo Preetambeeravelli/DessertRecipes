@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct MealsModel: Codable{
+    let meals: [Meals]
+}
+struct Meals: Codable, Identifiable{
+    let strMeal, strMealThumb, idMeal: String
+    var id: String{
+        idMeal
+    }
+}

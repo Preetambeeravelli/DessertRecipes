@@ -11,6 +11,7 @@
 		0E1E2E5C2C19FBF200003DC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E5B2C19FBF200003DC4 /* ContentView.swift */; };
 		0E1E2E5E2C19FBF400003DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1E2E5D2C19FBF400003DC4 /* Assets.xcassets */; };
 		0E1E2E612C19FBF400003DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1E2E602C19FBF400003DC4 /* Preview Assets.xcassets */; };
+		0E1E2E692C19FC1F00003DC4 /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E682C19FC1F00003DC4 /* MealsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0E1E2E5B2C19FBF200003DC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E1E2E5D2C19FBF400003DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E1E2E602C19FBF400003DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E1E2E682C19FC1F00003DC4 /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		0E1E2E582C19FBF200003DC4 /* DessertRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				0E1E2E672C19FC0400003DC4 /* Models */,
 				0E1E2E592C19FBF200003DC4 /* DessertRecipesApp.swift */,
 				0E1E2E5B2C19FBF200003DC4 /* ContentView.swift */,
 				0E1E2E5D2C19FBF400003DC4 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				0E1E2E602C19FBF400003DC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0E1E2E672C19FC0400003DC4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E2E682C19FC1F00003DC4 /* MealsModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1E2E692C19FC1F00003DC4 /* MealsModel.swift in Sources */,
 				0E1E2E5C2C19FBF200003DC4 /* ContentView.swift in Sources */,
 				0E1E2E5A2C19FBF200003DC4 /* DessertRecipesApp.swift in Sources */,
 			);
