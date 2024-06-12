@@ -18,3 +18,8 @@ enum NetworkError: Error {
     case DecodingError(Error)
     case RequestFailed(Error)
 }
+
+enum PropertyName{
+    case Ingredient
+    case Measurement
+}
