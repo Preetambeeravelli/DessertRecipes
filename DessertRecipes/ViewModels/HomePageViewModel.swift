@@ -12,7 +12,7 @@ class HomePageViewModel: ObservableObject{
     @Published var meals: [Meals] = []
     @Published var errorMessage: String?
     
-    private let networkManager = NetworkManager<MealsModel>(requestType: .Category("Dessert"))
+    private let networkManager = NetworkManager<MealsModel>(requestType: .Category(MealCategories.Dessert.rawValue))
     private var cancellables: Set<AnyCancellable> = []
     func fetchMeals() {
         networkManager.makeRequest()
@@ -22,7 +22,7 @@ class HomePageViewModel: ObservableObject{
                    case .finished:
                        break
                    case .failure(let error):
-                       self?.errorMessage = "Request failed with error: \(error)"
+                       self?.errorMessage = "\(error)"
                    }
                }, receiveValue: { [weak self] meals in
                    self?.meals = meals.meals.compactMap{$0}.sorted()

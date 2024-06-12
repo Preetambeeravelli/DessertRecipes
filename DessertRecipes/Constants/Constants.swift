@@ -15,3 +15,17 @@ enum AppTextConstants: String{
     case Instructions
     case Ingredients
 }
+
+enum PropertyNameConstants: String{
+    case strMeasure
+    case strIngredient
+}
+
+enum PropertyName{
+    case Ingredient
+    case Measurement
+}
+
+enum MealCategories: String{
+    case Dessert
+}

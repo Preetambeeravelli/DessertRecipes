@@ -27,11 +27,11 @@ class MealDetailViewModel: ObservableObject{
                 case .finished:
                     break
                 case .failure(let error):
-                    self?.errorMessage = "Request failed with error: \(error)"
+                    self?.errorMessage = "\(error)"
                 }
             }, receiveValue: { [weak self] mealDetailModel in
                 guard let meal = mealDetailModel.meals.first else {
-                    self?.errorMessage = "No meal found"
+                    self?.errorMessage = MealErrors.NoMealFound.rawValue
                     return
                 }
                 self?.mealDetail = meal
@@ -69,9 +69,9 @@ class MealDetailViewModel: ObservableObject{
         var propertyNameToReturn: String{
             switch propertyName{
             case .Ingredient:
-                return "strIngredient\(index)"
+                return "\(PropertyNameConstants.strIngredient.rawValue)\(index)"
             case .Measurement:
-                return "strMeasure\(index)"
+                return "\(PropertyNameConstants.strMeasure.rawValue)\(index)"
             }
         }
         return propertyNameToReturn

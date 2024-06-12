@@ -19,7 +19,6 @@ enum NetworkError: Error {
     case RequestFailed(Error)
 }
 
-enum PropertyName{
-    case Ingredient
-    case Measurement
+enum MealErrors: String{
+    case NoMealFound = "No meal found"
 }
