@@ -12,6 +12,15 @@
 		0E1E2E5E2C19FBF400003DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1E2E5D2C19FBF400003DC4 /* Assets.xcassets */; };
 		0E1E2E612C19FBF400003DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1E2E602C19FBF400003DC4 /* Preview Assets.xcassets */; };
 		0E1E2E692C19FC1F00003DC4 /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E682C19FC1F00003DC4 /* MealsModel.swift */; };
+		0E1E2E6B2C19FD2F00003DC4 /* MealDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E6A2C19FD2F00003DC4 /* MealDetailModel.swift */; };
+		0E1E2E702C19FD9000003DC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E6F2C19FD9000003DC4 /* NetworkManager.swift */; };
+		0E1E2E732C19FDC000003DC4 /* NetworkingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E722C19FDC000003DC4 /* NetworkingEnums.swift */; };
+		0E1E2E752C19FDF500003DC4 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E742C19FDF500003DC4 /* HomePageViewModel.swift */; };
+		0E1E2E772C19FE6100003DC4 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E762C19FE6100003DC4 /* HomePageView.swift */; };
+		0E1E2E792C19FEA200003DC4 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E782C19FEA200003DC4 /* MealListView.swift */; };
+		0E1E2E7B2C19FF0B00003DC4 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E7A2C19FF0B00003DC4 /* MealDetailView.swift */; };
+		0E1E2E7D2C19FF2600003DC4 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E7C2C19FF2600003DC4 /* MealDetailViewModel.swift */; };
+		0E1E2E7F2C19FFA000003DC4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E2E7E2C19FFA000003DC4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +30,15 @@
 		0E1E2E5D2C19FBF400003DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E1E2E602C19FBF400003DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E1E2E682C19FC1F00003DC4 /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
+		0E1E2E6A2C19FD2F00003DC4 /* MealDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailModel.swift; sourceTree = "<group>"; };
+		0E1E2E6F2C19FD9000003DC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0E1E2E722C19FDC000003DC4 /* NetworkingEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEnums.swift; sourceTree = "<group>"; };
+		0E1E2E742C19FDF500003DC4 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		0E1E2E762C19FE6100003DC4 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		0E1E2E782C19FEA200003DC4 /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
+		0E1E2E7A2C19FF0B00003DC4 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		0E1E2E7C2C19FF2600003DC4 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
+		0E1E2E7E2C19FFA000003DC4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +71,10 @@
 		0E1E2E582C19FBF200003DC4 /* DessertRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				0E1E2E712C19FD9500003DC4 /* Constants */,
+				0E1E2E6E2C19FD7F00003DC4 /* Views */,
+				0E1E2E6D2C19FD7900003DC4 /* Managers */,
+				0E1E2E6C2C19FD6E00003DC4 /* ViewModels */,
 				0E1E2E672C19FC0400003DC4 /* Models */,
 				0E1E2E592C19FBF200003DC4 /* DessertRecipesApp.swift */,
 				0E1E2E5B2C19FBF200003DC4 /* ContentView.swift */,
@@ -74,8 +96,45 @@
 			isa = PBXGroup;
 			children = (
 				0E1E2E682C19FC1F00003DC4 /* MealsModel.swift */,
+				0E1E2E6A2C19FD2F00003DC4 /* MealDetailModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0E1E2E6C2C19FD6E00003DC4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E2E742C19FDF500003DC4 /* HomePageViewModel.swift */,
+				0E1E2E7C2C19FF2600003DC4 /* MealDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0E1E2E6D2C19FD7900003DC4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E2E6F2C19FD9000003DC4 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0E1E2E6E2C19FD7F00003DC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E2E762C19FE6100003DC4 /* HomePageView.swift */,
+				0E1E2E7A2C19FF0B00003DC4 /* MealDetailView.swift */,
+				0E1E2E782C19FEA200003DC4 /* MealListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E1E2E712C19FD9500003DC4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E2E722C19FDC000003DC4 /* NetworkingEnums.swift */,
+				0E1E2E7E2C19FFA000003DC4 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +207,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1E2E732C19FDC000003DC4 /* NetworkingEnums.swift in Sources */,
 				0E1E2E692C19FC1F00003DC4 /* MealsModel.swift in Sources */,
+				0E1E2E752C19FDF500003DC4 /* HomePageViewModel.swift in Sources */,
 				0E1E2E5C2C19FBF200003DC4 /* ContentView.swift in Sources */,
+				0E1E2E702C19FD9000003DC4 /* NetworkManager.swift in Sources */,
+				0E1E2E7D2C19FF2600003DC4 /* MealDetailViewModel.swift in Sources */,
 				0E1E2E5A2C19FBF200003DC4 /* DessertRecipesApp.swift in Sources */,
+				0E1E2E772C19FE6100003DC4 /* HomePageView.swift in Sources */,
+				0E1E2E6B2C19FD2F00003DC4 /* MealDetailModel.swift in Sources */,
+				0E1E2E7B2C19FF0B00003DC4 /* MealDetailView.swift in Sources */,
+				0E1E2E792C19FEA200003DC4 /* MealListView.swift in Sources */,
+				0E1E2E7F2C19FFA000003DC4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

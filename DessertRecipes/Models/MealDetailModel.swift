@@ -7,13 +7,19 @@
 
 import Foundation
 
-struct MealDetailModel: Codable{
+// Struct representing the top-level meal detail
+struct MealDetailModel: Codable {
+    // An array of meal detail objects.
     let meals: [MealDetail]
 }
 
-struct MealDetail: Codable{
+// Struct representing MealDetail
+struct MealDetail: Codable {
+    // Properties of the meal
     let strMeal: String
     let strInstructions: String
+    
+    // Optional properties for ingredients
     let strIngredient1: String?
     let strIngredient2: String?
     let strIngredient3: String?
@@ -34,6 +40,8 @@ struct MealDetail: Codable{
     let strIngredient18: String?
     let strIngredient19: String?
     let strIngredient20: String?
+    
+    // Optional properties for measurements corresponding to the ingredients
     let strMeasure1: String?
     let strMeasure2: String?
     let strMeasure3: String?

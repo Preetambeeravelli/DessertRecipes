@@ -8,28 +8,43 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @StateObject var homePageVM = HomePageViewModel()
+    // State object to manage the view model for the home page
+    @StateObject var homePageViewModel = HomePageViewModel()
+    
     var body: some View {
-        VStack{
-            NavigationStack{
-                List{
-                    ForEach(homePageVM.meals){meal in
-                        NavigationLink{
-                            MealDetailView(viewModel: MealDetailViewModel(mealID: meal.idMeal), title: meal.strMeal)
-                        } label: {
-                            MealListView(mealName: meal.strMeal, mealImage: meal.strMealThumb)
-                        }
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(EdgeInsets())
+        VStack {
+            // List to display meals fetched from the view model
+            List {
+                // Iterating over the meals from the view model
+                ForEach(homePageViewModel.meals) { meal in
+                    // Navigation link to navigate to the meal detail view when a meal is selected
+                    NavigationLink {
+                        // Meal detail view initialized with the selected meal's ID and title
+                        MealDetailView(mealDetailViewModel: MealDetailViewModel(mealID: meal.idMeal), title: meal.strMeal)
+                    } label: {
+                        // Custom view for displaying meal name and image
+                        MealListView(mealName: meal.strMeal, mealImage: meal.strMealThumb)
                     }
+                    // Hides the row separator
+                    .listRowSeparator(.hidden)
+                    // Removes default insets for list rows
+                    .listRowInsets(EdgeInsets())
                 }
-                .listStyle(.plain)
-                .scrollIndicators(.hidden)
-                .navigationTitle(AppTextConstants.DessertRecipes.rawValue)
-            }.task {
-                homePageVM.fetchMeals()
             }
-        }.padding(.horizontal)
+            // Adds horizontal padding to the list
+            .padding(.horizontal)
+            // Sets the list style to plain
+            .listStyle(.plain)
+            // Hides scroll indicators
+            .scrollIndicators(.hidden)
+            // Sets the navigation title
+            .navigationTitle(AppTextConstants.DessertRecipes.rawValue)
+            // Fetch meals when the view appears
+            .task {
+                //fetch meals when the view appears
+                homePageViewModel.fetchMeals()
+            }
+        }
     }
 }
 
